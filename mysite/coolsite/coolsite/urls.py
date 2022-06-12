@@ -19,6 +19,8 @@ from women.views import index
 from women.views import*
 from django.urls import path, include
 from .views import *
+from django.conf.url.static import static
+from coolsite import settings
 
 
 urlpatterns = [
@@ -27,3 +29,5 @@ urlpatterns = [
     handler 404=pageNotFound
     
 ]
+if settigs.DEBUG:
+    urlpatterns +=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
