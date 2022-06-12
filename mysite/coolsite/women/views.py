@@ -5,8 +5,8 @@ def index(request):
 
 
 def categories(request,caidt):
-    if request.GET:
-        print(request.GET)
+    if request.POST:
+        print(request.POST)
     return HttpResponce(f"<h1>Статьи по категориям</h><p>{catid}</p>")
 
 
