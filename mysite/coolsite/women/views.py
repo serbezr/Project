@@ -28,4 +28,4 @@ def archive(request,year):
 
 def archive(request,years):
     if int(years) <2020:
-        return redirect('/', permanent=True)
+        return redirect('home', permanent=True)

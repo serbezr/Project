@@ -17,10 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from women.views import index
 from women.views import*
+from django.urls import path, include
+from .views import *
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',index),
-    path('cats/',categories),
+    path('',include(women.urls)),
+    handler 404=pageNotFound
+    
 ]
